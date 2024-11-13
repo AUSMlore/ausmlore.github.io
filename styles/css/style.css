@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap");
+* {
+  font-family: "Literata", serif;
+  color: #fff;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: url("../../static/bg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  backdrop-filter: blur(5px);
+  height: 100vh;
+}
+
+.glass {
+  box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px rgba(0, 0, 0, 0.5137254902);
+}
+.glass::after {
+  background-color: rgba(195, 195, 195, 0.1);
+  bottom: 10px;
+  content: "";
+  filter: blur(64px);
+  left: 10px;
+  opacity: 0.5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: -1;
+}
+
+.lang {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 5px;
+  text-align: center;
+  flex-direction: column;
+}
+.lang .box {
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  border: ridge;
+  gap: 10px;
+}
+.lang .box .btn-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 20px;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+  background: transparent;
+  border-radius: 10px;
+  border: ridge;
+}
+.btn:hover {
+  background: #220869;
+}
+
+.header {
+  text-align: center;
+  padding: 10px;
+  border-bottom: ridge;
+  background-color: rgba(0, 0, 0, 0.5137254902);
+  box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px rgba(0, 0, 0, 0.5137254902);
+}
+.header::after {
+  background-color: rgba(195, 195, 195, 0.1);
+  bottom: 10px;
+  content: "";
+  filter: blur(128px);
+  left: 10px;
+  opacity: 0.5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: -1;
+}
+
+.main {
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+
+.sidepanel {
+  display: flex;
+  flex-direction: column;
+  border: ridge;
+  border-radius: 10px;
+  padding: 10px;
+  gap: 20px;
+  text-align: center;
+  align-self: flex-start;
+  flex: 0 1 10%;
+}
+.sidepanel p {
+  font-size: 14px;
+  text-align: center;
+  margin: 0;
+  text-decoration: underline;
+}
+.sidepanel a {
+  font-size: 20px;
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+}
+.sidepanel a:hover {
+  text-decoration: underline;
+  color: #ea8026;
+}
+.sidepanel .items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.articles {
+  border: ridge;
+  border-radius: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 2;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border: ridge;
+  border-radius: 10px;
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.5137254902);
+}
+.file-list .file-item {
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.css.map */

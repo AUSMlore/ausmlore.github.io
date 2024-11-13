@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "outDir": "../js",
+      "target": "ESNext",
+      "lib": ["DOM", "ESNext"],
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true
+    },
+    "include": ["./**/*.ts"],
+    "exclude": ["node_modules"]
+}

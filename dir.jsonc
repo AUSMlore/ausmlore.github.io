@@ -1,0 +1,36 @@
+[
+    {
+        "contents": [
+            {
+                "name": ".",
+                "isdir": false
+            },
+            {
+                "name": "history",
+                "isdir": true,
+                "contents": [
+                {
+                    "name": ".",
+                    "isdir": false
+                },
+                {
+                    "name": "test.html",
+                    "isdir": false
+                }
+                ]
+            },
+            {
+                "name": "fractions",
+                "isdir": true
+            },
+            {
+                "name": "places",
+                "isdir": true
+            },
+            {
+                "name": "characters",
+                "isdir": true
+            }
+        ]
+    }
+]
