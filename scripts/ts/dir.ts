@@ -90,9 +90,9 @@ function displayDirectory(path: string) {
         return;
     }
 
-    let baseDir = '/ru';
+    let baseDir = '/wiki/ru';
     if (document.body.classList.contains('en')) {
-        baseDir = '/en';
+        baseDir = '/wiki/en';
     }
     const fileList = document.getElementById('fileList');
     fileList.innerHTML = '';
