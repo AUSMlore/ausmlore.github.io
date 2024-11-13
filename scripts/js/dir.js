@@ -107,7 +107,7 @@ function displayDirectory(path) {
             `${baseDir}${path}${path.endsWith('/') ? '' : '/'}${file.name}`;
         fileList.innerHTML += `
             <li class="file-item">
-                <a href="${file.isdir ? link : link}" ${!file.isdir ? 'target="_blank"' : ''}>
+                <a href="${file.isdir ? link : link}">
                     <span class="file-icon">${icon}</span>${file.name}
                 </a>
             </li>
