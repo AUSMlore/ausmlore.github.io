@@ -5,7 +5,7 @@ let isInitialized = false;
  */
 async function loadFileStructure() {
     try {
-        const response = await fetch('../dir.jsonc');
+        const response = await fetch('../dir.json');
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -45,7 +45,7 @@ function findDirectoryContents(path) {
     for (const part of parts) {
         if (!current.contents)
             return [];
-        const found = current.contents.find(item => item.name === part);
+        const found = current.contents.find((item) => item.name === part);
         if (!found || !found.isdir)
             return [];
         current = found;
@@ -63,7 +63,7 @@ function getCurrentPath() {
  */
 function generateBreadcrumb(path) {
     const parts = path.split('/').filter(part => part);
-    let breadcrumb = '<a href="#/">home</a>';
+    let breadcrumb = '<a href="#">home</a>';
     let currentPath = '';
     parts.forEach(part => {
         currentPath += '/' + part;

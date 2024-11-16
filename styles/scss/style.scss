@@ -3,6 +3,7 @@ $synth-purp: #220869;
 $synth-ora: #ea8026;
 $synth-dora: #de3336;
 $synth-lpurp: #7c02a6;
+$transparent-blk: #00000083;
 
 // code
 @import url('https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap');
@@ -21,11 +22,10 @@ body {
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(5px);
-    height: 100vh;
 }
 
 .glass{
-    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px #00000083;
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px $transparent-blk;
     
     &::after{
         background-color: rgba(195, 195, 195, .1);
@@ -84,8 +84,8 @@ body {
     text-align: center;
     padding: 10px;
     border-bottom: ridge;
-    background-color: #00000083;
-    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px #00000083;
+    background-color: $transparent-blk;
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px $transparent-blk;
     
     &::after {
         background-color: rgba(195, 195, 195, .1);
@@ -102,8 +102,8 @@ body {
 }
 
 .main {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 5%;
+    padding-right: 5%;
     margin-top: 20px;
     display: flex;
     gap: 20px;
@@ -119,7 +119,7 @@ body {
     gap: 20px;
     text-align: center;
     align-self: flex-start;
-    flex: 0 1 10%;
+    flex: 0 1 12%;
 
 
     p {
@@ -131,13 +131,7 @@ body {
 
     a {
         font-size: 20px;
-        text-decoration: none;
-        transition: all 0.3s ease-in;
-        
-        &:hover {
-            text-decoration: underline;
-            color: $synth-ora;
-        }
+        font-weight: 500;
     }
 
     .items {
@@ -155,8 +149,23 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     flex: 2;
+
+    h2 {
+        text-align: center;
+        font-size: xx-large;
+        margin-top: 0;
+    }
+    p {
+        font-weight: 500;
+    }
+    b {
+        font-weight: 675;
+    }
+    img {
+        width: 100%;
+        cursor: pointer;
+    }
 }
 
 .file-list {
@@ -167,9 +176,115 @@ body {
     border: ridge;
     border-radius: 10px;
     flex: 1;
-    background-color: #00000083;
+    background-color: $transparent-blk;
 
     .file-item {
         list-style: none;
     }
+}
+
+a{
+    text-decoration: none;
+    transition: all 0.3s ease-in;
+    font-weight: 700;
+    &:hover {
+        color: $synth-ora;
+    }
+}
+
+.enlarged {
+    z-index: 1000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+    cursor: pointer;
+    max-width: 65%;
+    object-fit: contain;
+    border: ridge;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: $transparent-blk;
+    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px $transparent-blk;
+    
+    &::after {
+        background-color: rgba(195, 195, 195, .1);
+        bottom: 10px;
+        content: '';
+        filter: blur(128px);
+        left: 10px;
+        opacity: .5;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: -1;
+    }
+
+    th, td {
+        border: ridge;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+code {
+    background-color: $transparent-blk;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    
+    &::after {
+        background-color: rgba(195, 195, 195, .1);
+        bottom: 10px;
+        content: '';
+        filter: blur(128px);
+        left: 10px;
+        opacity: .5;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: -1;
+    }
+}
+
+blockquote {
+    background-color: $transparent-blk;
+    padding: 5px;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    font-weight: 550;
+    
+    &::after {
+        background-color: rgba(195, 195, 195, .1);
+        bottom: 10px;
+        content: '';
+        filter: blur(128px);
+        left: 10px;
+        opacity: .5;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        z-index: -1;
+    }
+}
+
+// responsive
+@media screen and (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+    .sidepanel {
+        align-self: center;
+    }
+    .articles {
+        flex: 1;
+    }
+    .file-list {
+        flex: 1;
+    }
+    
 }

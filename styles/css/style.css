@@ -13,7 +13,6 @@ body {
   background-position: center;
   background-size: cover;
   backdrop-filter: blur(5px);
-  height: 100vh;
 }
 
 .glass {
@@ -90,8 +89,8 @@ body {
 }
 
 .main {
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 20px;
   display: flex;
   gap: 20px;
@@ -107,7 +106,7 @@ body {
   gap: 20px;
   text-align: center;
   align-self: flex-start;
-  flex: 0 1 10%;
+  flex: 0 1 12%;
 }
 .sidepanel p {
   font-size: 14px;
@@ -117,12 +116,7 @@ body {
 }
 .sidepanel a {
   font-size: 20px;
-  text-decoration: none;
-  transition: all 0.3s ease-in;
-}
-.sidepanel a:hover {
-  text-decoration: underline;
-  color: #ea8026;
+  font-weight: 500;
 }
 .sidepanel .items {
   display: flex;
@@ -138,8 +132,22 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   flex: 2;
+}
+.articles h2 {
+  text-align: center;
+  font-size: xx-large;
+  margin-top: 0;
+}
+.articles p {
+  font-weight: 500;
+}
+.articles b {
+  font-weight: 675;
+}
+.articles img {
+  width: 100%;
+  cursor: pointer;
 }
 
 .file-list {
@@ -154,6 +162,106 @@ body {
 }
 .file-list .file-item {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in;
+  font-weight: 700;
+}
+a:hover {
+  color: #ea8026;
+}
+
+.enlarged {
+  z-index: 1000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+  cursor: pointer;
+  max-width: 65%;
+  object-fit: contain;
+  border: ridge;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5137254902);
+  box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px rgba(0, 0, 0, 0.5137254902);
+}
+table::after {
+  background-color: rgba(195, 195, 195, 0.1);
+  bottom: 10px;
+  content: "";
+  filter: blur(128px);
+  left: 10px;
+  opacity: 0.5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: -1;
+}
+table th, table td {
+  border: ridge;
+  padding: 10px;
+  text-align: center;
+}
+
+code {
+  background-color: rgba(0, 0, 0, 0.5137254902);
+  padding: 0 5px;
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+}
+code::after {
+  background-color: rgba(195, 195, 195, 0.1);
+  bottom: 10px;
+  content: "";
+  filter: blur(128px);
+  left: 10px;
+  opacity: 0.5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: -1;
+}
+
+blockquote {
+  background-color: rgba(0, 0, 0, 0.5137254902);
+  padding: 5px;
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+  font-weight: 550;
+}
+blockquote::after {
+  background-color: rgba(195, 195, 195, 0.1);
+  bottom: 10px;
+  content: "";
+  filter: blur(128px);
+  left: 10px;
+  opacity: 0.5;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+  }
+  .sidepanel {
+    align-self: center;
+  }
+  .articles {
+    flex: 1;
+  }
+  .file-list {
+    flex: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
