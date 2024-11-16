@@ -21,24 +21,28 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    backdrop-filter: blur(5px);
+    background-attachment: fixed;
+    height: 100vh;
+
+    &:before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../static/bg.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        filter: blur(5px);
+        z-index: -1;
+    }
 }
 
 .glass{
     box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px $transparent-blk;
-    
-    &::after{
-        background-color: rgba(195, 195, 195, .1);
-        bottom: 10px;
-        content: '';
-        filter: blur(64px);
-        left: 10px;
-        opacity: .5;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        z-index: -1;
-    }
 }
 
 .lang {
@@ -85,20 +89,6 @@ body {
     padding: 10px;
     border-bottom: ridge;
     background-color: $transparent-blk;
-    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px $transparent-blk;
-    
-    &::after {
-        background-color: rgba(195, 195, 195, .1);
-        bottom: 10px;
-        content: '';
-        filter: blur(128px);
-        left: 10px;
-        opacity: .5;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        z-index: -1;
-    }
 }
 
 .main {
@@ -209,20 +199,6 @@ table {
     border-collapse: collapse;
     width: 100%;
     background-color: $transparent-blk;
-    box-shadow: inset 0 0 15px rgba(135, 135, 135, 0.2), 0 0 18px 3px $transparent-blk;
-    
-    &::after {
-        background-color: rgba(195, 195, 195, .1);
-        bottom: 10px;
-        content: '';
-        filter: blur(128px);
-        left: 10px;
-        opacity: .5;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        z-index: -1;
-    }
 
     th, td {
         border: ridge;
@@ -236,19 +212,6 @@ code {
     padding: 0 5px;
     border-radius: 5px;
     font-family: 'Fira Code', monospace;
-    
-    &::after {
-        background-color: rgba(195, 195, 195, .1);
-        bottom: 10px;
-        content: '';
-        filter: blur(128px);
-        left: 10px;
-        opacity: .5;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        z-index: -1;
-    }
 }
 
 blockquote {
@@ -257,19 +220,6 @@ blockquote {
     border-radius: 5px;
     font-family: 'Fira Code', monospace;
     font-weight: 550;
-    
-    &::after {
-        background-color: rgba(195, 195, 195, .1);
-        bottom: 10px;
-        content: '';
-        filter: blur(128px);
-        left: 10px;
-        opacity: .5;
-        position: absolute;
-        right: 10px;
-        top: 10px;
-        z-index: -1;
-    }
 }
 
 // responsive
