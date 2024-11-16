@@ -14,14 +14,12 @@ $transparent-blk: #00000083;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
     background-image: url("../../static/bg.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     backdrop-filter: blur(5px);
+    min-height: 100vh;
 }
 
 .glass{
