@@ -111,7 +111,6 @@ body {
     align-self: flex-start;
     flex: 0 1 12%;
 
-
     p {
         font-size: 14px;
         text-align: center;
@@ -119,7 +118,7 @@ body {
         text-decoration: underline;
     }
 
-    a {
+    .a {
         font-size: 20px;
         font-weight: 500;
     }
@@ -173,10 +172,12 @@ body {
     }
 }
 
-a{
+a, .a{
     text-decoration: none;
     transition: all 0.3s ease-in;
     font-weight: 700;
+    cursor: pointer;
+    
     &:hover {
         color: $synth-ora;
     }

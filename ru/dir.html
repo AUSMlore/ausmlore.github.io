@@ -1,36 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Directory</title>
-        <link rel="stylesheet" href="../styles/css/style.css">
-    </head>
-    <body>
-        <script src="../scripts/js/script.js"></script>
-        <div class="header">
-            <h1>All Universal Shopping Mall (AUSM)</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Directory</title>
+    <link rel="stylesheet" href="../styles/css/style.css">
+</head>
+
+<body>
+    <script src="../scripts/js/script.js"></script>
+    <div class="header">
+        <h1>All Universal Shopping Mall (AUSM)</h1>
+    </div>
+    <div class="main">
+        <div class="sidepanel glass">
+            <div class="items">
+                <p>other languages</p>
+                <div class="a" onclick="redir('../en')">English</div>
+            </div>
+            <div class="items">
+                <p>links</p>
+                <div class="a" onclick="redir('about.html')">About</div>
+                <div class="a" onclick="redir('guide.html')">Quick Guide</div>
+                <div class="a" onclick="redir('dir.html')">Directory</div>
+                <div class="a" onclick="redir('faq.html')">FAQ</div>
+            </div>
         </div>
-        <div class="main">
-            <div class="sidepanel glass">
-                <div class="items">
-                    <p>other languages</p>
-                    <a href="../en">English</a>
-                </div>
-                <div class="items">
-                    <p>links</p>
-                    <a href="about.html">About</a>
-                    <a href="guide.html">Quick Guide</a>
-                    <a href="dir.html">Directory</a>
-                    <a href="faq.html">FAQ</a>
-                </div>
-            </div>
-            <div class="articles glass">
-                <h2>Directory</h2>
-                <div id="breadcrumb"></div>
-                <ul class="file-list" id="fileList"></ul>
-                <div id="loading">Loading file structure...</div>
-            </div>
-            <script src="../scripts/js/dir.js"></script>
-    </body>
+        <div class="articles glass">
+            <h2>Directory</h2>
+            <div id="breadcrumb"></div>
+            <ul class="file-list" id="fileList"></ul>
+            <div id="loading">Loading file structure...</div>
+        </div>
+        <script src="../scripts/js/dir.js"></script>
+</body>
+
 </html>

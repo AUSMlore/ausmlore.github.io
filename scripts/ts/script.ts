@@ -1,4 +1,22 @@
 function redir(url: string): void {
+    // check if url is "baseurl"
+    const basePaths: { [key: string]: string } = {
+        'base': window.location.origin,
+        'ru': window.location.origin + '/ru',
+        'en': window.location.origin + '/en'
+    };
+
+    const urlParts = url.split('/');
+    const basePath = urlParts[0];
+    const subPath = urlParts[1];
+
+    if (basePaths[basePath]) {
+        url = basePaths[basePath];
+        if (subPath) {
+            url += '/' + subPath;
+        }
+    }
+
     window.location.href = url;
 }
 

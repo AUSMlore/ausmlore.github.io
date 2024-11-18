@@ -105,7 +105,7 @@ body:before {
   margin: 0;
   text-decoration: underline;
 }
-.sidepanel a {
+.sidepanel .a {
   font-size: 20px;
   font-weight: 500;
 }
@@ -155,12 +155,13 @@ body:before {
   list-style: none;
 }
 
-a {
+a, .a {
   text-decoration: none;
   transition: all 0.3s ease-in;
   font-weight: 700;
+  cursor: pointer;
 }
-a:hover {
+a:hover, .a:hover {
   color: #ea8026;
 }
 
