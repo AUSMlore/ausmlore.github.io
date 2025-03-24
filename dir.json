@@ -12,12 +12,6 @@
                 {
                     "name": "1st century",
                     "isdir": true
-                    "contents": [
-                    {
-                        "name": ".",
-                        "isdir": false
-                    }
-                    ]
                 },
                 {
                     "name": ".",
