@@ -12,12 +12,6 @@
                 {
                     "name": "1st century",
                     "isdir": true
-                    "contents": [
-                    {
-                            "name": "debates12.html",
-                            "isdir": false
-                    }
-                    ]
                 },
                 {
                     "name": ".",
