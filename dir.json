@@ -12,6 +12,12 @@
                 {
                     "name": "1st century",
                     "isdir": true
+                    "contents": [
+                        {
+                            "name": "test_event.html";
+                            "isdir": false
+                        }
+                    ]
                 },
                 {
                     "name": ".",
