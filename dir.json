@@ -11,7 +11,7 @@
                 "contents": [
                 {
                     "name": "1st century",
-                    "isdir": false
+                    "isdir": true
                 },
                 {
                     "name": ".",
